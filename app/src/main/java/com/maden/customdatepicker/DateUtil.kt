@@ -21,9 +21,9 @@ object DateUtil {
     private const val calculateTimeL = 24 * 60 * 60 * 1000
     fun calculateTime(time: Long): Long = time + calculateTimeL
 
-    fun isDisable(currentDay: Int): Boolean {
-        return arrayNumber[currentDay - 1] == isDisableNumber
-    }
+    fun isDisable(currentDay: Int): Boolean =
+        arrayNumber[currentDay - 1] == isDisableNumber
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun isDisableStatic(currentDay: Int): Boolean {
